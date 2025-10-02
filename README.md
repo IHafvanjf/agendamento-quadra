@@ -63,8 +63,5 @@ O sistema já está hospedado e pode ser acessado no link abaixo:
 - [ ] Notificações automáticas no WhatsApp  
 - [ ] Múltiplos métodos de pagamento  
 
-## Contribuição
-Pull requests são bem-vindos. Para mudanças grandes, abra primeiro uma issue para discutirmos o que você gostaria de alterar.
-
 ## Licença
 MIT License — use livremente para estudo e melhorias.
