@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #006400;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal do checkout */
+.checkout-container {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  margin-top: 15vh;
+  margin-bottom: 32px;
+}
+
+/* Botão de voltar */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14.4px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.back-btn:hover {
+  color: #dddddd;
+}
+
+/* Título */
+.checkout-container h1 {
+  margin: 24px 0;
+  font-size: 28px;
+}
+
+/* Espaço reservado para QR code */
+.qr-placeholder {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  width: 100%;
+  min-height: 240px;
+  position: relative;
+}
+
+.qr-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Caixa do código PIX */
+.pix-code-box {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.pix-code-box input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 14.4px;
+  color: #333333;
+  background-color: transparent;
+}
+.pix-code-box input:focus {
+  outline: none;
+}
+.pix-code-box button {
+  background-color: #4caf50;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.pix-code-box button:hover {
+  background-color: #3e8e41;
+}
+
+/* Ícone de copiar */
+.icon-copy {
+  width: 19.2px;
+  height: 19.2px;
+  fill: #ffffff;
+}
+
+/* Toast de confirmação */
+.toast {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333333;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14.4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.toast.visible {
+  opacity: 1;
+}
+.toast.hidden {
+  display: none;
+}
+
+/* Rodapé fixo no final */
+.footer-section {
+  background-color: #f8f9fa;
+  color: #333333;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: 20vh;
+}
+.footer-section .container-fluid {
+  padding: 0 32px;
+}
+.footer-cta {
+  border-top: 1px solid #dddddd;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin: 8px 8px 8px 0;
+}
+.cta-text {
+  display: inline-block;
+  padding-left: 15px;
+}
+.cta-text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  font-size: 15px;
+  color: #555555;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-logo img {
+  max-width: 200px;
+  height: auto;
+}
+.footer-text p {
+  color: #555555;
+  line-height: 1.8;
+}
+.footer-widget-heading h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #ff5e14;
+}
+.footer-widget ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-widget ul li {
+  margin-bottom: 8px;
+}
+.footer-widget ul li a {
+  color: #333333;
+  text-decoration: none;
+}
+.footer-widget ul li a:hover {
+  color: #ff5e14;
+}
+.whatsapp-btn {
+  margin-top: 10px;
+  text-align: center;
+}
+.whatsapp-btn a {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+.whatsapp-btn a i {
+  margin-right: 8px;
+}
+.whatsapp-btn a:hover {
+  background-color: #1ebe5d;
+}
+.copyright-area {
+  background-color: #a3a2a2;
+  width: 100%;
+  padding: 15px 0;
+}
+.copyright-text {
+  color: #21201e;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.notification {
+  margin-bottom: 16px;
+  min-height: 1.2em;
+}
+

@@ -1,0 +1,254 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #374151;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Tabela de agendamentos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+tbody td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+/* Botão Excluir */
+button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #e53935;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c62828;
+}
+
+
+header {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  padding-top: 0;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  padding-left: 1rem;
+}
+
+.calendar-nav {
+  position: relative;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto;
+}
+
+.calendar-nav button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #374151;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.calendar-nav button:hover {
+  color: #111827;
+}
+
+.calendar-nav .month-year {
+  font-size: 1.125rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.days-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.days-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.days-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(55, 65, 81, 0.4);
+  border-radius: 3px;
+}
+
+.days-wrapper button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+  background-color: #e5e7eb;
+  color: #374151;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.days-wrapper button:hover,
+.days-wrapper button.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+#tabelaControle {
+  width: 80%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+}
+
+#tabelaControle th,
+#tabelaControle td {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dddddd;
+  white-space: nowrap;
+}
+
+#tabelaControle th {
+  background-color: #4caf50;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#tabelaControle tr:hover {
+  background-color: #f1f1f1;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: #ffffff;
+  border: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 600px) {
+  #tabelaControle {
+    width: 100%;
+  }
+  .days-wrapper button {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0;
+    margin-right: 0.15rem;
+    margin-bottom: 0;
+    margin-left: 0.15rem;
+  }
+}

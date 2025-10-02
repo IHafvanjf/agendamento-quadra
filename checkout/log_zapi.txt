@@ -1,0 +1,91 @@
+=== 2025-06-19 21:50:33 ===
+Telefone: 5531987305141
+Mensagem: ✅ Olá Victor! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E2F85598A4390DE646FCE92E9BD23A9","messageId":"3EB0FD1316FA265D179B22","id":"3EB0FD1316FA265D179B22"}
+Erro cURL: 
+
+=== 2025-06-19 21:52:46 ===
+Telefone: 5531997941735
+Mensagem: ✅ Olá Pedro! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E2F85A90148102E5A95CABB451F5AAA","messageId":"3EB02EFCF7E190CADBE0F4","id":"3EB02EFCF7E190CADBE0F4"}
+Erro cURL: 
+
+=== 2025-06-21 14:05:20 ===
+Telefone: 1111111111
+Mensagem: ✅ Olá dasdas! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30D6B0F56EF015AC1946827F68BD4D","messageId":"3EB0EBED94AD893D52F231","id":"3EB0EBED94AD893D52F231"}
+Erro cURL: 
+
+=== 2025-06-21 14:25:49 ===
+Telefone: 9999999
+Mensagem: ✅ Olá jkdasdsa! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30D98D30E910E6DF7A6E42E3E9A48E","messageId":"3EB04FC4A4BF7AD6D07144","id":"3EB04FC4A4BF7AD6D07144"}
+Erro cURL: 
+
+=== 2025-06-21 14:27:01 ===
+Telefone: 99999999
+Mensagem: ✅ Olá jkksadsda! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30D9B83E5570D19B7FCE7B4685B861","messageId":"3EB0C5F49B0FD160160E72","id":"3EB0C5F49B0FD160160E72"}
+Erro cURL: 
+
+=== 2025-06-21 14:30:13 ===
+Telefone: 99999999
+Mensagem: ✅ Olá dsadasd! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DA2B110480BF8AC176CC83C89E2B","messageId":"3EB03B49085F9D3C09A061","id":"3EB03B49085F9D3C09A061"}
+Erro cURL: 
+
+=== 2025-06-21 14:31:16 ===
+Telefone: 23222222
+Mensagem: ✅ Olá dsadasd! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DA50721C0010B6276E42E3E9A48E","messageId":"3EB0B31A49A7B47EDE8ACC","id":"3EB0B31A49A7B47EDE8ACC"}
+Erro cURL: 
+
+=== 2025-06-21 14:32:57 ===
+Telefone: 3131346431313131
+Mensagem: ✅ Olá Pedro! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DA8C573570015789AEC479A27580","messageId":"3EB0D2EF898033A5DE5911","id":"3EB0D2EF898033A5DE5911"}
+Erro cURL: 
+
+=== 2025-06-21 14:35:00 ===
+Telefone: 123
+Mensagem: ✅ Olá Victor! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DAD6175DC0AB17B7BE0ECA061C80","messageId":"3EB0B5268BB3E9AEA6A2FC","id":"3EB0B5268BB3E9AEA6A2FC"}
+Erro cURL: 
+
+=== 2025-06-21 14:36:13 ===
+Telefone: 5531987305141
+Mensagem: ✅ Olá Victor! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DB01697440AA00EE0AA830BE2BE2","messageId":"3EB06B03DECACA1CB3A2C7","id":"3EB06B03DECACA1CB3A2C7"}
+Erro cURL: 
+
+=== 2025-06-21 14:37:38 ===
+Telefone: 5531987305141
+Mensagem: ✅ Olá Victor! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DB3442E1306B9E0AF2A58B623C4E","messageId":"3EB0CA54E2CFF5324730C5","id":"3EB0CA54E2CFF5324730C5"}
+Erro cURL: 
+
+=== 2025-06-21 14:39:09 ===
+Telefone: 5531987305141
+Mensagem: ✅ Olá Victor! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"zaapId":"3E30DB6A2C7450BEF55FDE558BC76256","messageId":"3EB0A3C711B05845837B8E","id":"3EB0A3C711B05845837B8E"}
+Erro cURL: 
+
+=== 2025-08-08 19:29:15 ===
+Telefone: 1234124124
+Mensagem: ✅ Olá Victor! Seu agendamento foi confirmado com sucesso.
+Caso precise cancelar, acesse nosso site.
+Resposta: {"error":"To continue sending a message, you must subscribe to this instance again"}
+Erro cURL: 
+

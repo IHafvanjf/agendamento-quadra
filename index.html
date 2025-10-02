@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quadra de Futebol</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- LOADER -->
+  <div id="loader">
+    <svg class="pl" viewBox="0 0 56 56" role="img" aria-label="Soccer ball rolling">
+      <clipPath id="ball-clip"><circle r="8" /></clipPath>
+      <defs>
+        <path id="hex" d="M 0 -9.196 L 8 -4.577 L 8 4.661 L 0 9.28 L -8 4.661 L -8 -4.577 Z"/>
+        <g id="hex-chunk" fill="none" stroke="hsl(var(--hue),10%,10%)" stroke-width="0.5">
+          <use href="#hex" fill="hsl(var(--hue),10%,10%)"/>
+          <use href="#hex" transform="translate(16,0)"/>
+          <use href="#hex" transform="rotate(60) translate(16,0)"/>
+        </g>
+        <g id="hex-pattern" transform="scale(0.333)">
+          <use href="#hex-chunk"/>
+          <use href="#hex-chunk" transform="rotate(30) translate(0,48) rotate(-30)"/>
+          <use href="#hex-chunk" transform="rotate(-180) translate(0,27.7) rotate(180)"/>
+          <use href="#hex-chunk" transform="rotate(-120) translate(0,27.7) rotate(120)"/>
+          <use href="#hex-chunk" transform="rotate(-60) translate(0,27.7) rotate(60)"/>
+          <use href="#hex-chunk" transform="translate(0,27.7)"/>
+          <use href="#hex-chunk" transform="rotate(60) translate(0,27.7) rotate(-60)"/>
+          <use href="#hex-chunk" transform="rotate(120) translate(0,27.7) rotate(-120)"/>
+        </g>
+        <g id="ball-texture" transform="translate(0,-3.5)">
+          <use href="#hex-pattern" transform="translate(-48,0)"/>
+          <use href="#hex-pattern" transform="translate(-32,0)"/>
+          <use href="#hex-pattern" transform="translate(-16,0)"/>
+          <use href="#hex-pattern" transform="translate(0,0)"/>
+          <use href="#hex-pattern" transform="translate(16,0)"/>
+        </g>
+      </defs>
+      <filter id="ball-shadow-inside"><feGaussianBlur in="SourceGraphic" stdDeviation="2"/></filter>
+      <filter id="ball-shadow-outside"><feGaussianBlur in="SourceGraphic" stdDeviation="1"/></filter>
+      <g transform="translate(28,28)">
+        <g class="pl__stripe-dot-group" fill="var(--red)">
+          <circle class="pl__stripe-dot" transform="rotate(32) translate(-18.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(87) translate(-18.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(103) translate(-18.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(138) translate(-18.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(228) translate(-18.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(243) translate(-18.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(328) translate(-18.25,0)"/>
+        </g>
+        <g class="pl__stripe-dot-group" fill="var(--white)">
+          <circle class="pl__stripe-dot" transform="rotate(41) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(77) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(92) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(146) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(175) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(293) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(314) translate(-15.75,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(340) translate(-15.75,0)"/>
+        </g>
+        <g class="pl__stripe-dot-group" fill="var(--blue)">
+          <circle class="pl__stripe-dot" transform="rotate(20) translate(-13.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(55) translate(-13.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(77) translate(-13.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(106) translate(-13.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(128) translate(-13.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(174) translate(-13.25,0)"/>
+          <circle class="pl__stripe-dot" transform="rotate(279) translate(-13.25,0)"/>
+        </g>
+        <g fill="none" stroke-linecap="round" stroke-width="2.5" transform="rotate(-90)">
+          <g class="pl__stripe-rotate">
+            <circle class="pl__stripe pl__stripe--1" r="18.25" stroke="var(--red)" stroke-dasharray="114.7 114.7"/>
+          </g>
+          <g class="pl__stripe-rotate">
+            <circle class="pl__stripe pl__stripe--2" r="15.75" stroke="var(--white)" stroke-dasharray="106.8 106.8"/>
+          </g>
+          <g class="pl__stripe-rotate">
+            <circle class="pl__stripe pl__stripe--3" r="13.25" stroke="var(--blue)" stroke-dasharray="99 99"/>
+          </g>
+        </g>
+        <g class="pl__ball" transform="translate(0,-15.75)">
+          <circle class="pl__ball-shadow" filter="url(#ball-shadow-outside)"
+                  fill="hsla(var(--hue),10%,10%,0.5)" r="8" cx="1" cy="1"/>
+          <circle fill="var(--white)" r="8"/>
+          <g clip-path="url(#ball-clip)">
+            <use class="pl__ball-texture" href="#ball-texture"/>
+          </g>
+          <circle class="pl__ball-shadow" clip-path="url(#ball-clip)"
+                  filter="url(#ball-shadow-inside)" fill="none"
+                  stroke="hsla(var(--hue),10%,10%,0.3)" stroke-width="5"
+                  r="12" cx="-4" cy="-4"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="minha-navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="img/logo.png" alt="Logo">
+        <p class="textoLogo">Sua logo aqui</p>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+      <ul class="nav-menu">
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#escolinha">Escolinha</a></li>
+        <li><a href="#quadra">Quadra</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SLIDER PRINCIPAL -->
+  <div class="slider">
+    <div class="slider__track">
+      <div class="slider__slide" style="background-image:url('img/slide3.jpg')">
+        <div class="slider__slide-content">
+          <h2>Rachão</h2>
+          <p>Chame a galera e jogue uma pelada com os amigos.</p>
+          <a href="#marcar" class="slider__btn">Clique aqui para marcar</a>
+        </div>
+      </div>
+      <div class="slider__slide" style="background-image:url('img/slide2.jpg')">
+        <div class="slider__slide-content">
+          <h2>Escolinha</h2>
+          <p>Matrículas abertas para formar seu futuro craque.</p>
+        </div>
+      </div>
+      <div class="slider__slide" style="background-image:url('img/slide1.jpg')">
+        <div class="slider__slide-content">
+          <h2>Aniversário</h2>
+          <p>Comemore seu dia com uma festa futebolera inesquecível.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider__arrow slider__arrow--prev">&#10094;</div>
+    <div class="slider__arrow slider__arrow--next">&#10095;</div>
+
+  </div>
+
+  <!-- EQUIPE -->
+  <section id="profissionais" class="profissionais-section">
+    <div class="profissionais-container">
+      <div class="profissionais-wrapper">
+        <div class="profissionais-slider">
+          <div class="profissionais-slide">
+            <img src="img/equipe1.jpg" alt="João Silva">
+            <h3>João Silva</h3>
+            <p>Treinador Principal</p>
+          </div>
+          <div class="profissionais-slide">
+            <img src="img/equipe2.jpg" alt="Maria Oliveira">
+            <h3>Maria Oliveira</h3>
+            <p>Preparadora Física</p>
+          </div>
+          <div class="profissionais-slide">
+            <img src="img/equipe3.jpg" alt="Carlos Santos">
+            <h3>Carlos Santos</h3>
+            <p>Coach de Goleiros</p>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-nos">
+        <h2>Sobre nós</h2>
+        <p>
+          Nossa escolinha une paixão pelo futebol e formação de campeões.
+          Com profissionais experientes e metodologia moderna,
+          desenvolvemos habilidades técnicas, táticas e trabalho em equipe.
+        </p>
+        <a href="https://wa.me/5511999999999" class="btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          chamar no whatsapp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREVIEW DA QUADRA -->
+  <section id="quadra" class="quadra-preview">
+    <div class="quadra-preview-container">
+      <div class="quadra-image">
+        <img src="img/imgQuadra.jpeg" alt="Qualidade do gramado da quadra">
+      </div>
+      <div class="quadra-content">
+        <h2>Nossa quadra</h2>
+        <p>
+          Nossa quadra é totalmente coberta e conta com grama sintética de alta performance, 
+          com fibras tridimensionais e base amortecedora. Esse sistema proporciona tração 
+          ideal, absorção de impacto e excelente durabilidade, garantindo partidas de futebol 
+          society com o máximo de conforto e segurança, em qualquer condição de tempo.
+        </p>
+        <a class="quadra-cta-btn">Agende sua partida aqui!!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE MATRÍCULA -->
+  <section class="matricula-section" id="escolinha">
+    <div class="matricula-image-box">
+      <img src="img/imgEscolinha.jpg" alt="Matricule-se já" />
+      <h2 class="matricula-title">MATRICULE-SE JÁ!!</h2>
+      <div class="matricula-texts">
+        <p>Novas amizades.</p>
+        <p>Novos desafios.</p>
+        <p>Seu futuro como jogador começa aqui!</p>
+      </div>
+    </div>
+    <a href="#matricule-se" class="btn-matricular">Matricular aqui</a>
+  </section>
+
+    <!-- SEÇÃO FESTA ANIVERSÁRIO -->
+     <div id="eventos">
+        <section id="festa-aniversario" class="festa-section">
+            <div class="festa-container">
+              <!-- lista de itens do pacote -->
+              <div class="festa-items">
+                <div class="festa-item">
+                  <i class="fas fa-futbol"></i>
+                  <h4>Quadra Reservada</h4>
+                  <p>1h de futebol com amigos</p>
+                </div>
+                <div class="festa-item">
+                  <i class="fas fa-birthday-cake"></i>
+                  <h4>Bolo Personalizado</h4>
+                  <p>Sabor à sua escolha</p>
+                </div>
+                <div class="festa-item">
+                  <i class="fas fa-music"></i>
+                  <h4>Som Ambiente</h4>
+                  <p>Playlist personalizada</p>
+                </div>
+                <div class="festa-item">
+                  <i class="fas fa-camera"></i>
+                  <h4>Fotógrafo</h4>
+                  <p>Registra todos os momentos</p>
+                </div>
+              </div>
+              <!-- texto informativo + botão -->
+              <div class="festa-info">
+                <h2>Pacote Aniversário</h2>
+                <p>
+                  Comemore seu dia especial na nossa escolinha de futebol!
+                  Nosso pacote inclui quadra coberta, bolo, som, fotógrafo
+                  e muito mais para deixar sua festa inesquecível.
+                </p>
+                <a href="#quero-comemorar" class="btn-festa">Agendar comemoração</a>
+              </div>
+            </div>
+          </section>
+     </div>
+
+       <!-- BOOKING MODAL -->
+      <div id="booking-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-window">
+          <!-- etapa 1: calendário -->
+          <div class="booking-step step-calendar">
+            <header class="cal-header">
+              <button class="prev-month">&lt;</button>
+              <h3 class="month-year"></h3>
+              <button class="next-month">&gt;</button>
+            </header>
+            <table class="calendar">
+              <thead>
+                <tr>
+                  <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th>
+                  <th>Qui</th><th>Sex</th><th>Sáb</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <!-- ETAPA: Nome + Telefone + E-mail -->
+          <div class="booking-step step-nome hidden">
+            <h4>Insira seus dados</h4>
+            <div class="input-group">
+              <input type="text" id="input-nome" placeholder="Digite seu nome completo" />
+            </div>
+            <div class="input-group">
+              <input type="tel" id="input-telefone" placeholder="Telefone" />
+            </div>
+            <div class="input-group">
+              <input type="email" id="input-email" placeholder="E-mail (opcional)" />
+            </div>
+            <button id="btn-nome">Próximo</button>
+          </div>
+
+          <!-- etapa 2: seleção de horário -->
+          <div class="booking-step step-times hidden">
+            <h4 id="selected-date"></h4>
+            <p class="time-info">
+              Para reservar mais de 1 hora, clique em quantos horários quiser.
+            </p>
+            <div class="times-list">
+            </div>
+            <button class="confirm-times">Confirmar horário</button>
+          </div>
+          <!-- botão de fechar -->
+          <button class="modal-close">✕</button>
+        </div>
+
+        <div id="booking-summary" class="booking-summary hidden">
+          <span id="summary-text"></span>
+        </div>  
+      </div>
+
+      <!--  FOOTER  -->
+      <footer class="footer-section">
+        <!-- Parte superior do footer -->
+        <div class="container-fluid">
+          <!-- CTA (Localização / Telefone / E-mail) -->
+          <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="cta-text">
+                    <h4 data-translate="rodapeEnderecoTitulo">Encontre-nos</h4>
+                    <span data-translate="rodapeEnderecoLocal">Belo Horizonte - MG</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-phone"></i>
+                  <div class="cta-text">
+                    <h4 data-translate="rodapeTelefoneTitulo">Telefone</h4>
+                    <span>3199794-1735</span><br>
+                    <span>3198730-5141</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="far fa-envelope-open"></i>
+                  <div class="cta-text">
+                    <h4 data-translate="rodapeEmailTitulo">Email</h4>
+                    <span>techinnova01@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conteúdo principal (Logo / Serviços / Fale Conosco) -->
+          <div class="footer-content pt-5 pb-5">
+            <div class="row">
+              <!-- Logo e descrição -->
+              <div class="col-xl-4 col-lg-4 mb-50">
+                <div class="footer-widget">
+                  <div class="footer-logo">
+                    <a href="#"><img src="img/logoAlltech.png" class="img-fluid" alt="logo"></a>
+                  </div>
+                  <div class="footer-text">
+                    <p data-translate="rodapeDescricao">
+                      A AllTech é a revolução digital que sua empresa precisa! Especialistas em desenvolvimento de sites e aplicações web, transformamos ideias em experiências digitais envolventes, escaláveis e de alto desempenho. Seja para fortalecer sua presença online, aumentar suas conversões ou oferecer uma experiência digital impecável, criamos soluções sob medida para o seu negócio.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Lista de serviços -->
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                <div class="footer-widget">
+                  <div class="footer-widget-heading">
+                    <h3 data-translate="rodapeServicosTitulo">Serviços</h3>
+                  </div>
+                  <ul>
+                    <li><a href="#" data-translate="rodapeServico1">Desenvolvimento de Sites</a></li>
+                    <li><a href="#" data-translate="rodapeServico2">Aplicações Web</a></li>
+                    <li><a href="#" data-translate="rodapeServico3">E-commerce</a></li>
+                    <li><a href="#" data-translate="rodapeServico4">Otimização de SEO</a></li>
+                    <li><a href="#" data-translate="rodapeServico5">Manutenção e Suporte</a></li>
+                    <li><a href="#" data-translate="rodapeServico6">Integração de APIs</a></li>
+                    <li><a href="#" data-translate="rodapeServico7">Sistemas Personalizados</a></li>
+                    <li><a href="#" data-translate="rodapeServico8">UX/UI Design</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Fale Conosco -->
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                <div class="footer-widget">
+                  <div class="footer-widget-heading">
+                    <h3 data-translate="rodapeContatoTitulo">Fale Conosco</h3>
+                  </div>
+                  <div class="footer-text mb-25">
+                    <p data-translate="rodapeContatoTexto">
+                      Precisa de um orçamento ou tem alguma dúvida? Fale conosco agora pelo WhatsApp!
+                    </p>
+                  </div>
+                  <div class="whatsapp-btn">
+                    <a href="https://wa.me/31997941735" target="_blank">
+                      <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- fecha .container principal -->
+
+        <!--  Full-width copyright  -->
+          <div class="copyright-area">
+          <div class="container">
+              <div class="row justify-content-center">
+              <div class="col-auto">
+                  <p class="copyright-text" data-translate="rodapeCopy">
+                  Copyright © 2025, Todos os direitos reservados, <a href="https://alltechwebsites.com/" class="alltech-link" id="linkAlltech">AllTech</a>
+                  </p>
+              </div>
+              </div>
+          </div>
+          </div>
+      </footer>
+      <!-- fim Footer -->
+  <script src="script.js"></script>
+</body>
+</html>
