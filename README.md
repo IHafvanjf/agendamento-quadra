@@ -41,3 +41,30 @@ Aplicação web completa para gestão de aluguel de quadra society, com landing 
 O sistema já está hospedado e pode ser acessado no link abaixo:
 
 [Visualizar Projeto Online](https://lavenderblush-whale-354742.hostingersite.com)
+
+## Demonstração
+
+### Formulário de Dados
+<img src="https://github.com/user-attachments/assets/6fbed7e5-3751-4172-b385-a08b8db8b473" width="280">
+
+### Seleção de Data
+<img src="https://github.com/user-attachments/assets/88b8181e-0be9-491c-ba99-cf281c74fadf" width="280">
+
+### Seleção de Horários
+<img src="https://github.com/user-attachments/assets/f294888f-bcd2-45d0-b578-6601a2970966" width="280">
+
+### Página da Quadra
+<img src="https://github.com/user-attachments/assets/4bf7043d-a815-42e4-b1db-17942c670f85" width="280">
+
+## Roadmap
+
+- [ ] Painel administrativo completo  
+- [ ] Relatórios de uso  
+- [ ] Notificações automáticas no WhatsApp  
+- [ ] Múltiplos métodos de pagamento  
+
+## Contribuição
+Pull requests são bem-vindos. Para mudanças grandes, abra primeiro uma issue para discutirmos o que você gostaria de alterar.
+
+## Licença
+MIT License — use livremente para estudo e melhorias.
