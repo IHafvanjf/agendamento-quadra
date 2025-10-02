@@ -44,17 +44,15 @@ O sistema já está hospedado e pode ser acessado no link abaixo:
 
 ## Demonstração
 
-### Formulário de Dados
-<img src="https://github.com/user-attachments/assets/6fbed7e5-3751-4172-b385-a08b8db8b473" width="280">
+<div align="center">
 
-### Seleção de Data
-<img src="https://github.com/user-attachments/assets/88b8181e-0be9-491c-ba99-cf281c74fadf" width="280">
+  <img src="https://github.com/user-attachments/assets/6fbed7e5-3751-4172-b385-a08b8db8b473" width="220" alt="Formulário de Dados">
+  <img src="https://github.com/user-attachments/assets/88b8181e-0be9-491c-ba99-cf281c74fadf" width="220" alt="Seleção de Data">
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/f294888f-bcd2-45d0-b578-6601a2970966" width="220" alt="Seleção de Horários">
+  <img src="https://github.com/user-attachments/assets/4bf7043d-a815-42e4-b1db-17942c670f85" width="220" alt="Página da Quadra">
 
-### Seleção de Horários
-<img src="https://github.com/user-attachments/assets/f294888f-bcd2-45d0-b578-6601a2970966" width="280">
-
-### Página da Quadra
-<img src="https://github.com/user-attachments/assets/4bf7043d-a815-42e4-b1db-17942c670f85" width="280">
+</div>
 
 ## Roadmap
 
