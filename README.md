@@ -62,4 +62,4 @@ O sistema já está hospedado e pode ser acessado no link abaixo:
 - [ ] Múltiplos métodos de pagamento  
 
 ## Licença
-MIT License — use livremente para estudo e melhorias.
+MIT License — uso permitido apenas para visualização.
