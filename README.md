@@ -2,6 +2,8 @@
 
 Aplicação web completa para gestão de aluguel de quadra society, com landing page moderna, sistema de reservas online, pagamentos via PIX e painel administrativo para controle de clientes e horários.
 
+> Projeto de demonstração — desenvolvido apenas para fins de estudo e portfólio. Não representa um sistema comercial ativo.
+
 ## Funcionalidades
 
 - Landing Page Responsiva  
