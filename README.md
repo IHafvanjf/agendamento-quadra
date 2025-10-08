@@ -66,4 +66,7 @@ O sistema já está hospedado e pode ser acessado no link abaixo:
 - [ ] Múltiplos métodos de pagamento  
 
 ## Licença
-MIT License — uso permitido apenas para visualização.
+Este repositório é disponibilizado para visualização e avaliação de portfólio.
+É proibido copiar, modificar, distribuir ou utilizar o código em produção ou para fins comerciais sem autorização por escrito.
+Consulte o arquivo LICENSE para os termos completos.
+
